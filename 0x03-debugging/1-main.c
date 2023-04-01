@@ -1,24 +1,22 @@
+#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
+#include "hash_tables.h"
 
 /**
- * main - causes an infinite loop
- * Return: 0
+ * main - check the code
+ *
+ * Return: Always EXIT_SUCCESS.
  */
-
 int main(void)
 {
-	int i;
+    char *s;
 
-	printf("Infinite loop incoming :(\n");
-
-	 i = 0;
-
-	  /*while (i < 10)*/
-	  /*{*/
-	  /* putchar(i);*/
-	  /*}*/
-
-	 printf("Infinite loop avoided! \\o/\n");
-
-	 return (0);
+    s = "cisfun";
+    printf("%lu\n", hash_djb2((unsigned char *)s));
+    s = "Don't forget to tweet today";
+    printf("%lu\n", hash_djb2((unsigned char *)s));
+    s = "98";
+    printf("%lu\n", hash_djb2((unsigned char *)s));
+    return (EXIT_SUCCESS);
 }
