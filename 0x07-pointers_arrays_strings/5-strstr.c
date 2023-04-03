@@ -26,4 +26,3 @@ char *_strstr(char *haystack, char *needle)
 
 	return (NULL);
 }
-0 comments on commit 655082d
