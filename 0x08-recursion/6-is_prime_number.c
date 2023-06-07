@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+int _prime(int n, int i);
 /**
  * is_prime_number - says if the input is a prime number or not
  * @n: a number that could be a prime
@@ -21,9 +22,9 @@ int is_prime_number(int n)
  */
 int _prime(int n, int i)
 {
-	if (n == 2 * i + 1)
+	if (n == (2 * i) + 1)
 		return (1);
 	else
 		return (0);
-	return (_prime(n, n - 1));
+	return (_prime(n, i - 1));
 }
