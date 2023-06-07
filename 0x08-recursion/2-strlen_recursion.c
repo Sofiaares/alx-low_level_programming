@@ -4,14 +4,14 @@
 /**
  * _strlen_recursion - calculate the length of a string
  * @s: string
- * Return: length
+ * Return: length of s
  */
 int _strlen_recursion(char *s)
 {
 	int len = 0;
 	if (*s)
 	{
-		len += _strlen_recursion(s + 1);
+		len = _strlen_recursion(s + 1);
 		len++;
 	}
 	return (len);
