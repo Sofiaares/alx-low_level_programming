@@ -22,11 +22,9 @@ int is_prime_number(int n)
  */
 int _prime(int n, int i)
 {
-	if (n == (2 * i) + 1)
-		return (1);
-	if (i == 1)
-		return (1);
 	if (n % i == 0 && i > 0)
 		return (0);
+	if (i == 1)
+		return (1);
 	return (_prime(n, i - 1));
 }
