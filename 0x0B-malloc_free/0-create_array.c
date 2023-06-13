@@ -6,7 +6,7 @@
  * create_array - function that creates an array of chars
  * @c: specific char that initiliaze it
  * @size: the size of the memory to print
- * return: a pointer to the array, or NULL if it fails or if size = 0
+ * return: arr (on success); NULL (error)
  */
 
 char *create_array(unsigned int size, char c)
