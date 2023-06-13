@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * main - prints themultiplication of two numbers
+ * main - prints the multiplication of two numbers
  * @argc: argument count
  * @argv: argiment vector
  * Return: 0 if true, 1 if false
