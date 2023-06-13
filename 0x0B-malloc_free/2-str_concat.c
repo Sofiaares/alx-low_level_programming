@@ -5,8 +5,9 @@
  * str_concat - function that concatenates two strings
  * @s1: the first string to concentre
  * @s2: the second string
- * return: the two strings concatenated; NULL (error)
+ * return: the two strings concatenated
  */
+
 char *str_concat(char *s1, char *s2)
 {
 	int x = 0, y = 0, z = 0, t = 0;
@@ -43,7 +44,6 @@ char *str_concat(char *s1, char *s2)
 		}
 		z++;
 	}
-	s[z] = '\0';
-	
+	s[z] = '\0';	
 	return (s);
 }
