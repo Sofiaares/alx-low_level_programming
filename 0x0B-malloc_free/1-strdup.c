@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * _strdup - returns a pointer to a new string which is a duplicate of the string str
+ * _strdup - returns a pointer to a new string duplicate of the string str
  * @str: string obtained with malloc, and can be freed with free
- * Return: returns a pointer to the duplicated string (on success); NULL (error)
+ * Return: returns a pointer to duplicated string (on success); NULL (error)
  */
 char *_strdup(char *str)
 {
