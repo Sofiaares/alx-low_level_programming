@@ -12,7 +12,9 @@ void *malloc_checked(unsigned int b)
 	void *all_mem;
 
 	all_mem = malloc(b);
+	
 	if (all_mem == NULL)
 		exit(98);
+	
 	return (all_mem);
 }
