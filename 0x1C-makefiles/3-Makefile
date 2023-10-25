@@ -1,0 +1,27 @@
+# Makefile for building the "school" executable and managing cleaning
+
+# Variables
+CC = gcc
+SRC = main.c util.c  # Add more .c files separated by space if needed
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+# Default target: "all" rule
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) -o $(NAME) $(OBJ)
+
+%.o: %.c
+	$(CC) -c $< -o $@
+
+clean:
+	$(RM) $(NAME) *~ \#*\#
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all

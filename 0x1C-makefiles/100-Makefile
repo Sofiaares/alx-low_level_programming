@@ -1,0 +1,42 @@
+# Makefile for building the "school" executable and managing cleaning
+
+# Variables
+CC = gcc
+SRC = main.c util.c  # Add more .c files separated by space if needed
+NAME = school
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# Object files derived from source files
+OBJ = $(SRC:.c=.o)
+
+# Determine the compiler to use
+COMPILE = $(CC) -c -o $@ $< $(CFLAGS)
+
+# Default target: "all" rule
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS)
+
+# Compiling source files to object files
+%.o: %.c
+	$(COMPILE)
+
+# Cleaning rules
+RM = rm -f
+RMOBJ = $(RM) $(OBJ)
+RMBIN = $(RM) $(NAME)
+CLEAN = $(RMOBJ) *~ \#*\#
+oclean: $(RMOBJ)
+clean: $(CLEAN)
+fclean: $(CLEAN) $(RMBIN)
+
+# Recompilation rule
+re: fclean all
+
+# Phony targets to prevent issues with files of the same name
+.PHONY: all clean oclean fclean re
+
+# Ensure m.h is present
+_DEPS = m.h
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))

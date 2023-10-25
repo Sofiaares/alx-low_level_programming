@@ -1,0 +1,7 @@
+all: school
+
+school: main.c
+    gcc -o school main.c
+
+clean:
+    rm -f school
